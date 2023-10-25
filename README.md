@@ -1,29 +1,25 @@
-![image](https://github.com/B-Wilso/16mips/assets/132187112/5ac264a7-51ac-4996-aac9-1e5628e431a1)# 16mips
+# 16mips
 
 
 # Look at the pdf named FPGA Final to see an evaluation of code written for a 16 bit 16 instruction mips processor:
 https://github.com/B-Wilso/16mips/blob/main/FPGA%20FINAL.pdf
+Our object was to create a 16 bit 16 instruction MIPs processor, flash it onto an FPGA board, load set of instructions into memory to run, and display the IR and PC on the seven segement display. My implementation has the ability to execute all 16 instructions and the longest cycle instruction is BIZ/BNZ for 4cc.
 
-# Our object was to create a 16 bit 16 instruction MIPs processor, flash it onto an FPGA board, load set of instructions into memory to run, and display the IR and PC on the seven segement display.
+Overview of clock cycles based on instructions:
+| Instruction | 1cc | 2cc | 3cc | 4cc |
+| ---- | ---- | ---- | ---- | ---- |
+| ALU (ADD, SUB, AND, OR, XOR, NOT, SLA, SRA) | FETCH: Fetches instruction and loads into IR | DECODE: Increments PC and loads Rp and Rq buses, at same time opcode is sent to ALU for computation | EXECUTION: Selects ALU datapath from MUX and writes to RF[W_addr] | ---- |
+| LI | FETCH: Fetches instruction and loads into IR | DECODE: Increments PC and selects RF_W_data sign extended on MUX to write to RF[W_addr] | ---- | ---- |
+| LW | FETCH: Fetches instruction and loads into IR | DECODE: Increments PC and writes MEM[D_addr] to RF[W_addr] register | ---- | ---- |
+| SW | FETCH: Fetches instruction and loads into IR | DECODE: Increments PC and loads our DEST part of instruction code into Rp address bus | EXECUTION: Writes the input W_data into MEM[D_addr] | ---- |
+| BIZ/BNZ | FETCH: Fetches instruction and loads into IR | DECODE: Increments PC and loads RF[RF_Rp_addr] | WAIT: RF_Rp_zero MUST be asserted during this time to check if Rp output is 0 or not | CHECK: Load offset into PC if RF_Rp output is zero or not; else return to FETCH |
+| JAL | FETCH: Fetches instruction and loads into IR | DECODE: Increments PC and decodes instruction | EXECUTION: offsets PC | ---- |
+| JR | FETCH: Fetches instruction and loads into IR | DECODE: Increments PC and loads RF[RF_Rp_addr] | EXECUTION: Loads the registers contents into PC without adding offset | ---- |
 
-|                 |             | 4-bit            | 4-bit | 4-bit     | 4-bit  |                                    |             |
-|-----------------|-------------|------------------|-------|-----------|--------|------------------------------------|-------------|
-|                 | Instruction | Instruction word |       |           |        | Action                             |             |
-|                 |             | op               | dest  | src       | target |                                    |             |
-| Data Processing | ADD         | 0000             | Rd    | Rs        | Rt     | dest <= src + targ                 | add         |
-|                 | SUB         | 0001             | Rd    | Rs        | Rt     | dest <= src - targ                 | sub         |
-|                 | AND         | 0010             | Rd    | Rs        | Rt     | dest <= src & targ                 | and         |
-|                 | OR          | 0011             | Rd    | Rs        | Rt     | dest <= src | targ                 | or          |
-|                 | XOR         | 0100             | Rd    | Rs        | Rt     | dest <= src ^ targ                 | xor         |
-|                 | NOT         | 0101             | Rd    | Rs        | ??     | dest <= ~src                       | not         |
-|                 | SLA         | 0110             | Rd    | Rs        | ??     | dest <= src << 1                   | shift left  |
-|                 | SRA         | 0111             | Rd    | Rs        | ??     | dest <= src >> 1                   | shift right |
-| Memory Access   | LI          | 1000             | Rd    | Immediate |        | dest <= Imm << 8                   | shift left  |
-|                 | LW          | 1001             | Rd    | Dir       |        | dest <= Mem[Dir]                   | nop         |
-|                 | SW          | 1010             | Rt    | Dir       |        | Mem[Dir] <= dest                   | nop         |
-| Control Flow    | BIZ         | 1011             | Rs    | Offset    |        | if dest == 0; PC = PC + 1 + Offset | add         |
-|                 | BNZ         | 1100             | Rs    | Offset    |        | if dest != 0; PC = PC + 1 + Offset | add         |
-|                 | JAL         | 1101             | Rd    | Offset    |        | dest = PC+1; PC=PC+1+Offset        | add         |
-|                 | JMP         | 1110             | ??    | Offset    |        | PC=PC+1+Offset                     | add         |
-|                 | JR          | 1111             | ??    | Rs        | ??     | PC=src                             | nop         |
+# Instruction overviews:
+![image](https://github.com/B-Wilso/16mips/assets/132187112/5ac264a7-51ac-4996-aac9-1e5628e431a1)
+
+# Control Signals to be asserted based on state transitions:
+![image](https://github.com/B-Wilso/16mips/assets/132187112/6d0657cf-5aa4-41e5-8995-065700dc34b7)
+
 
