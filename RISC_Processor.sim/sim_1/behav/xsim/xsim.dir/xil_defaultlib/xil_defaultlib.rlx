@@ -1,0 +1,17 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sim_1/new/test_RISC.v,1690953967,verilog,,,,test_RISC,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/imports/new/sw_to_dec.v,1690607828,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/imports/new/top_level.v,,sw_to_dec,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/imports/new/top_level.v,1690666883,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sim_1/new/test_RISC.v,,seg_top_level,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/RF_RISC.v,1690081047,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/control_unit.v,,RF_RISC,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/control_unit.v,1690667663,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/data_memory.v,,control_unit,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/data_memory.v,1691003434,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/data_path.v,,data_memory,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/data_path.v,1689966833,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/instruction_register.v,,data_path,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/instruction_register.v,1689968059,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_alu.v,,instruction_register,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_alu.v,1689911606,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_control.v,,ALU_RISC,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_control.v,1690952509,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_processor.v,,controller_RISC,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_processor.v,1690937793,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/program_counter.v,,mips_processor,,,,,,,,
+C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/program_counter.v,1690953028,verilog,,C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/imports/new/sw_to_dec.v,,program_counter,,,,,,,,

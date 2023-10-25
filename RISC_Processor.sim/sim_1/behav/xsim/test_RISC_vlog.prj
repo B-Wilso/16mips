@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../RISC_Processor.srcs/sources_1/new/RF_RISC.v" \
+"../../../../RISC_Processor.srcs/sources_1/new/control_unit.v" \
+"../../../../RISC_Processor.srcs/sources_1/new/data_memory.v" \
+"../../../../RISC_Processor.srcs/sources_1/new/data_path.v" \
+"../../../../RISC_Processor.srcs/sources_1/new/instruction_register.v" \
+"../../../../RISC_Processor.srcs/sources_1/new/mips_alu.v" \
+"../../../../RISC_Processor.srcs/sources_1/new/mips_control.v" \
+"../../../../RISC_Processor.srcs/sources_1/new/mips_processor.v" \
+"../../../../RISC_Processor.srcs/sources_1/new/program_counter.v" \
+"../../../../RISC_Processor.srcs/sources_1/imports/new/sw_to_dec.v" \
+"../../../../RISC_Processor.srcs/sources_1/imports/new/top_level.v" \
+"../../../../RISC_Processor.srcs/sim_1/new/test_RISC.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

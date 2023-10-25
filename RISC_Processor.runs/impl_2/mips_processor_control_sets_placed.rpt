@@ -1,0 +1,103 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sun Aug  6 18:59:05 2023
+| Host         : DESKTOP-P7CKL48 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file mips_processor_control_sets_placed.rpt
+| Design       : mips_processor
+| Device       : xc7a100ti
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    25 |
+|    Minimum number of control sets                        |    25 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    10 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    25 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    22 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |              38 |           12 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              32 |           32 |
+| Yes          | No                    | Yes                    |             280 |           99 |
+| Yes          | Yes                   | No                     |              40 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------+--------------------------------------------+----------------------+------------------+----------------+--------------+
+|      Clock Signal      |                Enable Signal               |   Set/Reset Signal   | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------+--------------------------------------------+----------------------+------------------+----------------+--------------+
+|  clk_i_IBUF_BUFG       | sevenSeg/anode_select[7]_i_1_n_0           | M0_control/IR/rstn_i |                2 |              8 |         4.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/FSM_onehot_state_reg[7]_0[0] | M0_control/IR/rstn_i |                7 |              8 |         1.14 |
+|  clk_slow_reg_n_0_BUFG |                                            | M0_control/IR/rstn_i |                5 |              9 |         1.80 |
+|  clk_slow_reg_n_0_BUFG | M0_control/Controller/Q[0]                 | M0_control/IR/rstn_i |                8 |             16 |         2.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[9]_3[0]           | M0_control/IR/rstn_i |                6 |             16 |         2.67 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[15]_0[0]          |                      |               16 |             16 |         1.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[9]_1[0]           | M0_control/IR/rstn_i |                4 |             16 |         4.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[8]_4[0]           | M0_control/IR/rstn_i |                3 |             16 |         5.33 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[9]_2[0]           | M0_control/IR/rstn_i |                7 |             16 |         2.29 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[11]_3[0]          | M0_control/IR/rstn_i |                4 |             16 |         4.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[8]_1[0]           | M0_control/IR/rstn_i |                3 |             16 |         5.33 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[11]_0[0]          | M0_control/IR/rstn_i |                4 |             16 |         4.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[8]_0[0]           | M0_control/IR/rstn_i |                3 |             16 |         5.33 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[8]_2[0]           | M0_control/IR/rstn_i |                8 |             16 |         2.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[8]_5[0]           | M0_control/IR/rstn_i |                3 |             16 |         5.33 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[8]_7[0]           | M0_control/IR/rstn_i |                4 |             16 |         4.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[11]_1[0]          | M0_control/IR/rstn_i |                5 |             16 |         3.20 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[11]_2[0]          | M0_control/IR/rstn_i |                9 |             16 |         1.78 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[8]_3[0]           | M0_control/IR/rstn_i |                8 |             16 |         2.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/E[0]                         |                      |               16 |             16 |         1.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[8]_6[0]           | M0_control/IR/rstn_i |                8 |             16 |         2.00 |
+|  clk_slow_reg_n_0_BUFG | M0_control/IR/IR_out_reg[8]_8[0]           | M0_control/IR/rstn_i |                5 |             16 |         3.20 |
+|  clk_i_IBUF_BUFG       |                                            | M0_control/IR/rstn_i |                7 |             29 |         4.14 |
+|  clk_i_IBUF_BUFG       | sevenSeg/counter                           | M0_control/IR/rstn_i |                9 |             32 |         3.56 |
+|  clk_slow_reg_n_0_BUFG | M0_control/Controller/Q[3]                 |                      |               16 |             64 |         4.00 |
++------------------------+--------------------------------------------+----------------------+------------------+----------------+--------------+
+
+

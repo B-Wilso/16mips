@@ -1,0 +1,562 @@
+
+*** Running vivado
+    with args -log mips_processor.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mips_processor.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source mips_processor.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 382.941 ; gain = 60.820
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/utils_1/imports/synth_2/mips_processor.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/utils_1/imports/synth_2/mips_processor.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top mips_processor -part xc7a100ticsg324-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100ti'
+INFO: [Device 21-403] Loading part xc7a100ticsg324-1L
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15080
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'err_flag', assumed default net type 'wire' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/control_unit.v:47]
+INFO: [Synth 8-11241] undeclared symbol 'z_flag', assumed default net type 'wire' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_alu.v:40]
+INFO: [Synth 8-11241] undeclared symbol 'zero', assumed default net type 'wire' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_processor.v:64]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1211.000 ; gain = 408.996
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mips_processor' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_processor.v:23]
+INFO: [Synth 8-6157] synthesizing module 'seg_top_level' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/imports/new/top_level.v:9]
+INFO: [Synth 8-6157] synthesizing module 'sw_to_dec' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/imports/new/sw_to_dec.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'sw_to_dec' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/imports/new/sw_to_dec.v:9]
+WARNING: [Synth 8-567] referenced signal 'PC_in' should be on the sensitivity list [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/imports/new/top_level.v:31]
+WARNING: [Synth 8-567] referenced signal 'R_in' should be on the sensitivity list [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/imports/new/top_level.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'seg_top_level' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/imports/new/top_level.v:9]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/control_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'controller_RISC' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_control.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_control.v:194]
+WARNING: [Synth 8-567] referenced signal 'RF_Rp_zero' should be on the sensitivity list [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_control.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'controller_RISC' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'program_counter' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/program_counter.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'program_counter' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/program_counter.v:23]
+INFO: [Synth 8-6157] synthesizing module 'instruction_register' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/instruction_register.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_register' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/instruction_register.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/control_unit.v:23]
+INFO: [Synth 8-6157] synthesizing module 'data_memory' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/data_memory.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'data_memory' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/data_memory.v:23]
+INFO: [Synth 8-6157] synthesizing module 'data_path' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/data_path.v:23]
+INFO: [Synth 8-6157] synthesizing module 'RF_RISC' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/RF_RISC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'RF_RISC' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/RF_RISC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU_RISC' [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_alu.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_alu.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_RISC' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_alu.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'data_path' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/data_path.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mips_processor' (0#1) [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_processor.v:23]
+WARNING: [Synth 8-7137] Register Rp_data_reg in module RF_RISC has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/RF_RISC.v:56]
+WARNING: [Synth 8-7137] Register Rq_data_reg in module RF_RISC has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/RF_RISC.v:58]
+WARNING: [Synth 8-3848] Net zero in module/entity mips_processor does not have driver. [C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.srcs/sources_1/new/mips_processor.v:64]
+WARNING: [Synth 8-7129] Port PC_clr in module program_counter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port zero in module controller_RISC is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Rp_data[15] in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Rp_data[14] in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Rp_data[13] in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Rp_data[12] in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Rp_data[11] in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Rp_data[10] in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Rp_data[9] in module control_unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Rp_data[8] in module control_unit is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1303.320 ; gain = 501.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1303.320 ; gain = 501.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1303.320 ; gain = 501.316
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1303.320 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[8]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[9]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[10]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[11]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[12]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[13]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[14]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[15]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgb1_blue_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgb1_green_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgb1_red_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgb2_blue_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgb2_green_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rgb2_red_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnc_i'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnu_i'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnl_i'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnr_i'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnd_i'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_red_o[0]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_red_o[1]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_red_o[2]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:157]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:157]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_red_o[3]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_green_o[0]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:160]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:160]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_green_o[1]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_green_o[2]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_green_o[3]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_blue_o[0]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_blue_o[1]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_blue_o[2]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_blue_o[3]'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:168]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:168]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_hs_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:170]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vga_vs_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:171]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:171]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'miso'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:188]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:188]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'mosi'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:189]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:189]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sclk'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:190]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:190]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ss'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:191]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:191]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmp_scl'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:198]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:198]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmp_sda'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:199]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:199]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pdm_clk_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:205]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:205]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pdm_data_i'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:206]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:206]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pdm_lrsel_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:207]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:207]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pwm_audio_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:212]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:212]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pwm_sdaudio_o'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:213]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:213]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ps2_clk'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:225]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:225]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ps2_data'. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:226]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc:226]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Brock/Downloads/Nexys4DDR_4 Demo.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mips_processor_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mips_processor_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1359.488 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1359.488 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1359.488 ; gain = 557.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100ticsg324-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1359.488 ; gain = 557.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1359.488 ; gain = 557.484
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'controller_RISC'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_idle |                        000000001 |                             0000
+                 S_fetch |                        000000010 |                             0001
+                   S_dec |                        000000100 |                             0010
+                  S_exec |                        000001000 |                             0011
+                 S_store |                        000010000 |                             0100
+                  S_wait |                        000100000 |                             1001
+                 S_check |                        001000000 |                             1000
+                  S_jump |                        010000000 |                             0101
+                    S_JR |                        100000000 |                             0110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'controller_RISC'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1359.488 ; gain = 557.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   28 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   3 Input    8 Bit       Adders := 1     
++---XORs : 
+	   2 Input     16 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               28 Bit    Registers := 1     
+	               16 Bit    Registers := 19    
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   28 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 3     
+	   8 Input   16 Bit        Muxes := 1     
+	   9 Input    9 Bit        Muxes := 1     
+	   8 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 22    
+	   8 Input    1 Bit        Muxes := 6     
+	   3 Input    1 Bit        Muxes := 1     
+	   9 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design mips_processor has port disp_seg_o[7] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.488 ; gain = 557.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++---------------+-----------------------+---------------+----------------+
+|Module Name    | RTL Object            | Depth x Width | Implemented As | 
++---------------+-----------------------+---------------+----------------+
+|sw_to_dec      | cathode_y             | 32x7          | LUT            | 
+|mips_processor | sevenSeg/D1/cathode_y | 32x7          | LUT            | 
++---------------+-----------------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++---------------+----------------------+-----------+----------------------+-----------------+
+|Module Name    | RTL Object           | Inference | Size (Depth x Width) | Primitives      | 
++---------------+----------------------+-----------+----------------------+-----------------+
+|mips_processor | M1_memory/memory_reg | Implied   | 256 x 16             | RAM256X1S x 16  | 
++---------------+----------------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1359.488 ; gain = 557.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1369.016 ; gain = 567.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++---------------+----------------------+-----------+----------------------+-----------------+
+|Module Name    | RTL Object           | Inference | Size (Depth x Width) | Primitives      | 
++---------------+----------------------+-----------+----------------------+-----------------+
+|mips_processor | M1_memory/memory_reg | Implied   | 256 x 16             | RAM256X1S x 16  | 
++---------------+----------------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1378.062 ; gain = 576.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1378.062 ; gain = 576.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1378.062 ; gain = 576.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1378.062 ; gain = 576.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1378.062 ; gain = 576.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1378.062 ; gain = 576.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1378.062 ; gain = 576.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     2|
+|2     |CARRY4    |    21|
+|3     |LUT1      |    11|
+|4     |LUT2      |    46|
+|5     |LUT3      |    39|
+|6     |LUT4      |    57|
+|7     |LUT5      |    58|
+|8     |LUT6      |   217|
+|9     |MUXF7     |    64|
+|10    |MUXF8     |    32|
+|11    |RAM256X1S |    16|
+|12    |FDCE      |   317|
+|13    |FDPE      |     1|
+|14    |FDRE      |    72|
+|15    |IBUF      |     2|
+|16    |OBUF      |    16|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1378.062 ; gain = 576.059
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:50 . Memory (MB): peak = 1378.062 ; gain = 519.891
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 1378.062 ; gain = 576.059
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1389.945 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 133 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1393.598 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 16 instances
+
+Synth Design complete, checksum: cb9949f4
+INFO: [Common 17-83] Releasing license: Synthesis
+52 Infos, 88 Warnings, 70 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:55 ; elapsed = 00:01:05 . Memory (MB): peak = 1393.598 ; gain = 985.500
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Brock/Documents/RISC_Processor/RISC_Processor.runs/synth_2/mips_processor.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mips_processor_utilization_synth.rpt -pb mips_processor_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug  6 18:57:36 2023...
