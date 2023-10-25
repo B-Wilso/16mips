@@ -1,5 +1,6 @@
 # 16mips
-Our objective was to create a 16 bit 16 instruction MIPs processor, flash it onto an FPGA board, load a set of instructions into memory to run, and display the IR and PC on the seven segement display. 
+Our objective was to create a 16 bit 16 instruction MIPs processor, flash it onto an FPGA board, load a set of instructions into memory to run, and display the IR and PC on the seven segement display. We were to refer to this diagram when coding the individual modules:
+![image](https://github.com/B-Wilso/16mips/assets/132187112/ee0c710f-28d4-4cbe-9edb-ce55d622c02c)
 
 ## To see an evaluation of the code refer to this review:
 https://github.com/B-Wilso/16mips/blob/main/FPGA%20FINAL.pdf
