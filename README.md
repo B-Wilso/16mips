@@ -4,7 +4,7 @@ Our objective was to create a 16 bit 16 instruction MIPs processor, flash it ont
 ## To see an evaluation of the code refer to this review:
 https://github.com/B-Wilso/16mips/blob/main/FPGA%20FINAL.pdf
 
-Overview of clock cycles based on instructions:
+## Overview of clock cycles based on instructions:
 | Instruction | 1cc | 2cc | 3cc | 4cc |
 | ---- | ---- | ---- | ---- | ---- |
 | ALU (ADD, SUB, AND, OR, XOR, NOT, SLA, SRA) | FETCH: Fetches instruction and loads into IR | DECODE: Increments PC and loads Rp and Rq buses, at same time opcode is sent to ALU for computation | EXECUTION: Selects ALU datapath from MUX and writes to RF[W_addr] | ---- |
