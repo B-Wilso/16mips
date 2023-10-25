@@ -3,7 +3,7 @@
 
 # Look at the pdf named FPGA Final to see an evaluation of code written for a 16 bit 16 instruction mips processor:
 https://github.com/B-Wilso/16mips/blob/main/FPGA%20FINAL.pdf
-Our object was to create a 16 bit 16 instruction MIPs processor, flash it onto an FPGA board, load set of instructions into memory to run, and display the IR and PC on the seven segement display. My implementation has the ability to execute all 16 instructions and the longest cycle instruction is BIZ/BNZ for 4cc.
+Our objective was to create a 16 bit 16 instruction MIPs processor, flash it onto an FPGA board, load a set of instructions into memory to run, and display the IR and PC on the seven segement display. 
 
 Overview of clock cycles based on instructions:
 | Instruction | 1cc | 2cc | 3cc | 4cc |
